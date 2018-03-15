@@ -5,26 +5,25 @@ use_frameworks!
 workspace 'CocoaPodsFail.xcworkspace'
 
 target 'CocoaPodsFail' do
+    project 'CocoaPodsFail.xcproj'
   # Pods for CocoaPodsFail
 
+    pod 'FrameworkA', :path => 'FrameworkA'
 end
 
 target 'FrameworkA' do
-    project 'FrameworkA/FrameworkA.xcodeproj'
+    project 'FrameworkA/FrameworkA.xcproj'
+    podspec :path => 'FrameworkA/FrameworkA.podspec'
 
-    # Pods for CocoaPodsFail
-    pod 'PromiseKit'
+    pod 'FrameworkB', :path => 'FrameworkB'
 
     target 'FrameworkATests' do
         inherit! :search_paths
     end
-
 end
 
 target 'FrameworkB' do
-    project 'FrameworkB/FrameworkB.xcodeproj'
-
-    # Pods for FrameworkB
-    pod 'Alamofire'
-
+    project 'FrameworkB/FrameworkB.xcproj'
+    podspec :path => 'FrameworkB/FrameworkB.podspec'
 end
+

@@ -31,13 +31,6 @@
 			remoteGlobalIDString = CDFC306F2059496C000EBE4D;
 			remoteInfo = FrameworkATests;
 		};
-		CDFC30A920594DBB000EBE4D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = CDFC309A20594DA7000EBE4D /* FrameworkA.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = CDFC30652059496C000EBE4D;
-			remoteInfo = FrameworkA;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -144,7 +137,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				CDFC30AA20594DBB000EBE4D /* PBXTargetDependency */,
 			);
 			name = CocoaPodsFail;
 			productName = CocoaPodsFail;
@@ -262,10 +254,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CocoaPodsFail/Pods-CocoaPodsFail-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,14 +280,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		CDFC30AA20594DBB000EBE4D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FrameworkA;
-			targetProxy = CDFC30A920594DBB000EBE4D /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		CDFC304E205948B0000EBE4D /* Main.storyboard */ = {

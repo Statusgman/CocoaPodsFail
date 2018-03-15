@@ -9,14 +9,14 @@
 /* Begin PBXBuildFile section */
 		056A2295FD3310FFC478A77C /* Pods_FrameworkA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0821BC58667B6A3E75DCCA72 /* Pods_FrameworkA.framework */; };
 		6492BEDF14234A8664AD2571 /* Pods_FrameworkATests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E19631868720512C12FC898D /* Pods_FrameworkATests.framework */; };
-		CDFC30702059496C000EBE4D /* FrameworkA.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFC30662059496C000EBE4D /* FrameworkA.framework */; };
+		CD353837205A9AA000238FE4 /* A.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD353836205A9AA000238FE4 /* A.swift */; };
+		CD35383F205AA32B00238FE4 /* FrameworkA.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CD35383E205AA32B00238FE4 /* FrameworkA.podspec */; };
 		CDFC30752059496C000EBE4D /* FrameworkATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDFC30742059496C000EBE4D /* FrameworkATests.swift */; };
 		CDFC30772059496C000EBE4D /* FrameworkA.h in Headers */ = {isa = PBXBuildFile; fileRef = CDFC30692059496C000EBE4D /* FrameworkA.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CDFC30AB20594DCD000EBE4D /* FrameworkB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDFC30A820594DB4000EBE4D /* FrameworkB.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		CDFC30712059496C000EBE4D /* PBXContainerItemProxy */ = {
+		CD35384D205AAAFF00238FE4 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CDFC305D2059496C000EBE4D /* Project object */;
 			proxyType = 1;
@@ -45,6 +45,8 @@
 		4A8A83D9BF88848657C6843B /* Pods-FrameworkATests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworkATests.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-FrameworkATests/Pods-FrameworkATests.debug.xcconfig"; sourceTree = "<group>"; };
 		8BA7136D9976076DEC1927A7 /* Pods-FrameworkA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworkA.release.xcconfig"; path = "../Pods/Target Support Files/Pods-FrameworkA/Pods-FrameworkA.release.xcconfig"; sourceTree = "<group>"; };
 		993F70DBF557CA3A9CB90564 /* Pods-FrameworkA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworkA.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-FrameworkA/Pods-FrameworkA.debug.xcconfig"; sourceTree = "<group>"; };
+		CD353836205A9AA000238FE4 /* A.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = A.swift; sourceTree = "<group>"; };
+		CD35383E205AA32B00238FE4 /* FrameworkA.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = FrameworkA.podspec; sourceTree = "<group>"; };
 		CDFC30662059496C000EBE4D /* FrameworkA.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FrameworkA.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDFC30692059496C000EBE4D /* FrameworkA.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkA.h; sourceTree = "<group>"; };
 		CDFC306A2059496C000EBE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,7 +62,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDFC30AB20594DCD000EBE4D /* FrameworkB.framework in Frameworks */,
 				056A2295FD3310FFC478A77C /* Pods_FrameworkA.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -69,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDFC30702059496C000EBE4D /* FrameworkA.framework in Frameworks */,
 				6492BEDF14234A8664AD2571 /* Pods_FrameworkATests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,9 +88,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD35383D205AA31B00238FE4 /* Deployment */ = {
+			isa = PBXGroup;
+			children = (
+				CD35383E205AA32B00238FE4 /* FrameworkA.podspec */,
+			);
+			name = Deployment;
+			sourceTree = "<group>";
+		};
 		CDFC305C2059496C000EBE4D = {
 			isa = PBXGroup;
 			children = (
+				CD35383D205AA31B00238FE4 /* Deployment */,
 				CDFC30682059496C000EBE4D /* FrameworkA */,
 				CDFC30732059496C000EBE4D /* FrameworkATests */,
 				CDFC30672059496C000EBE4D /* Products */,
@@ -113,6 +122,7 @@
 			children = (
 				CDFC30692059496C000EBE4D /* FrameworkA.h */,
 				CDFC306A2059496C000EBE4D /* Info.plist */,
+				CD353836205A9AA000238FE4 /* A.swift */,
 			);
 			path = FrameworkA;
 			sourceTree = "<group>";
@@ -193,7 +203,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				CDFC30722059496C000EBE4D /* PBXTargetDependency */,
+				CD35384E205AAAFF00238FE4 /* PBXTargetDependency */,
 			);
 			name = FrameworkATests;
 			productName = FrameworkATests;
@@ -212,6 +222,7 @@
 				TargetAttributes = {
 					CDFC30652059496C000EBE4D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 					CDFC306E2059496C000EBE4D = {
@@ -259,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD35383F205AA32B00238FE4 /* FrameworkA.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,10 +291,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/../Pods/Target Support Files/Pods-FrameworkATests/Pods-FrameworkATests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD353837205A9AA000238FE4 /* A.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,10 +392,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		CDFC30722059496C000EBE4D /* PBXTargetDependency */ = {
+		CD35384E205AAAFF00238FE4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CDFC30652059496C000EBE4D /* FrameworkA */;
-			targetProxy = CDFC30712059496C000EBE4D /* PBXContainerItemProxy */;
+			targetProxy = CD35384D205AAAFF00238FE4 /* PBXContainerItemProxy */;
 		};
 		CDFC30AD20594DD4000EBE4D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -507,6 +522,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 993F70DBF557CA3A9CB90564 /* Pods-FrameworkA.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -519,6 +535,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.dudarenko.FrameworkA;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -528,6 +545,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8BA7136D9976076DEC1927A7 /* Pods-FrameworkA.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

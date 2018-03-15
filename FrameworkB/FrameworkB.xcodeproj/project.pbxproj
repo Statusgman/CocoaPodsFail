@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD353839205A9AB500238FE4 /* B.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD353838205A9AB500238FE4 /* B.swift */; };
+		CD35383C205AA2FD00238FE4 /* FrameworkB.podspec in Resources */ = {isa = PBXBuildFile; fileRef = CD35383B205AA2FD00238FE4 /* FrameworkB.podspec */; };
 		CDFC308F20594AAA000EBE4D /* FrameworkB.h in Headers */ = {isa = PBXBuildFile; fileRef = CDFC308D20594AAA000EBE4D /* FrameworkB.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FA770EA2ED2DDD9FCB9682C9 /* Pods_FrameworkB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 410CA650F59746AE8F6A01A4 /* Pods_FrameworkB.framework */; };
 /* End PBXBuildFile section */
@@ -14,6 +16,8 @@
 /* Begin PBXFileReference section */
 		1FAA201AAB2541935CC2E7F3 /* Pods-FrameworkB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FrameworkB.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-FrameworkB/Pods-FrameworkB.debug.xcconfig"; sourceTree = "<group>"; };
 		410CA650F59746AE8F6A01A4 /* Pods_FrameworkB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FrameworkB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD353838205A9AB500238FE4 /* B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = B.swift; sourceTree = "<group>"; };
+		CD35383B205AA2FD00238FE4 /* FrameworkB.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = FrameworkB.podspec; sourceTree = "<group>"; };
 		CDFC308A20594AAA000EBE4D /* FrameworkB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FrameworkB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDFC308D20594AAA000EBE4D /* FrameworkB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FrameworkB.h; sourceTree = "<group>"; };
 		CDFC308E20594AAA000EBE4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,9 +53,18 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		CD35383A205AA2F000238FE4 /* Deployment */ = {
+			isa = PBXGroup;
+			children = (
+				CD35383B205AA2FD00238FE4 /* FrameworkB.podspec */,
+			);
+			name = Deployment;
+			sourceTree = "<group>";
+		};
 		CDFC308020594AAA000EBE4D = {
 			isa = PBXGroup;
 			children = (
+				CD35383A205AA2F000238FE4 /* Deployment */,
 				CDFC308C20594AAA000EBE4D /* FrameworkB */,
 				CDFC308B20594AAA000EBE4D /* Products */,
 				B5EC40D779F9C2AE6C10D66B /* Pods */,
@@ -72,6 +85,7 @@
 			children = (
 				CDFC308D20594AAA000EBE4D /* FrameworkB.h */,
 				CDFC308E20594AAA000EBE4D /* Info.plist */,
+				CD353838205A9AB500238FE4 /* B.swift */,
 			);
 			path = FrameworkB;
 			sourceTree = "<group>";
@@ -121,6 +135,7 @@
 				TargetAttributes = {
 					CDFC308920594AAA000EBE4D = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -147,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD35383C205AA2FD00238FE4 /* FrameworkB.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD353839205A9AB500238FE4 /* B.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +333,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1FAA201AAB2541935CC2E7F3 /* Pods-FrameworkB.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -328,6 +346,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.dudarenko.FrameworkB;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -337,6 +356,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E1F16954784064FA5943F003 /* Pods-FrameworkB.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;

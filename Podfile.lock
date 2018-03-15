@@ -1,5 +1,13 @@
 PODS:
   - Alamofire (4.7.0)
+  - FrameworkA (0.0.1):
+    - FrameworkA/FrameworkB (= 0.0.1)
+    - PromiseKit
+  - FrameworkA/FrameworkB (0.0.1):
+    - Alamofire
+    - PromiseKit
+  - FrameworkB (0.0.1):
+    - Alamofire
   - PromiseKit (6.2.1):
     - PromiseKit/CorePromise (= 6.2.1)
     - PromiseKit/Foundation (= 6.2.1)
@@ -12,12 +20,22 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire
+  - FrameworkA (from `FrameworkA`)
+  - FrameworkB (from `FrameworkB`)
   - PromiseKit
+
+EXTERNAL SOURCES:
+  FrameworkA:
+    :path: FrameworkA
+  FrameworkB:
+    :path: FrameworkB
 
 SPEC CHECKSUMS:
   Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  FrameworkA: 872d2def643758e589ff1c3684b31e1157f3b6f4
+  FrameworkB: 82028f98bcf7706338fb82a62be12bbc91dc2300
   PromiseKit: edaca6f0a7ed73b08c287600537d13867a7fabc7
 
-PODFILE CHECKSUM: 847aaf005c48e4e3c391677255405549ad6f0048
+PODFILE CHECKSUM: d8a3b17deead7532b444ff13a6e32a4a11841e37
 
 COCOAPODS: 1.4.0
